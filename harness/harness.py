@@ -197,6 +197,32 @@ DIMENSIONAL_CHECKS = {
 }
 
 # ---------------------------------------------------------------------------
+# STRUCTURAL/SCHEMA checks — a DEFINITIONAL schema's own stated arithmetic
+# (partition sums, floor ordering) is a genuine machine-checkable identity.
+# CHECKED here means ONLY that internal consistency; it does NOT prove the
+# schema's semantics (that the axes actually measure trust).
+# ---------------------------------------------------------------------------
+
+def chk_axis_schema_13():
+    sacred, structural, introspection = sp.Integer(2), sp.Integer(7), sp.Integer(4)
+    total = sacred + structural + introspection
+    floors = {"sacred": sp.Rational(95, 100),
+              "structural": sp.Rational(90, 100),
+              "introspection": sp.Rational(90, 100)}
+    partition_ok = bool(total == sp.Integer(13))
+    floors_ok = all(bool((f > 0) & (f <= 1)) for f in floors.values())
+    order_ok = bool(floors["sacred"] >= floors["structural"]) and \
+               bool(floors["structural"] == floors["introspection"])
+    ok = partition_ok and floors_ok and order_ok
+    return ok, ("sympy exact arithmetic: axis partition 2 sacred + 7 structural + 4 "
+                "introspection == 13; floors 0.95/0.90/0.90 in (0,1] with sacred>=structural. "
+                "Schema-internal consistency only; does NOT prove the axes measure trust.")
+
+SCHEMA_CHECKS = {
+    "axis-schema-13": chk_axis_schema_13,
+}
+
+# ---------------------------------------------------------------------------
 # Runner
 # ---------------------------------------------------------------------------
 def run(corpus_path: str, ledger_path: str, write: bool = True):
@@ -212,6 +238,9 @@ def run(corpus_path: str, ledger_path: str, write: bool = True):
                 status = "CHECKED" if ok else "FAILED"
             elif fid in DIMENSIONAL_CHECKS:
                 ok, method = DIMENSIONAL_CHECKS[fid]()
+                status = "CHECKED" if ok else "FAILED"
+            elif fid in SCHEMA_CHECKS:
+                ok, method = SCHEMA_CHECKS[fid]()
                 status = "CHECKED" if ok else "FAILED"
             elif cls == "EMPIRICAL":
                 method = "UNCHECKABLE here: requires the named dataset (readiness-runs / uds-governance-receipts / k-verify jsonl); not a symbolic identity."
@@ -235,8 +264,10 @@ def run(corpus_path: str, ledger_path: str, write: bool = True):
     print(f"ledger status: {dict(by_status)}")
     sym = [e for e in ledger if e["id"] in SYMBOLIC_CHECKS]
     dim = [e for e in ledger if e["id"] in DIMENSIONAL_CHECKS]
+    sch = [e for e in ledger if e["id"] in SCHEMA_CHECKS]
     print(f"SYMBOLIC checks run: {len(sym)}  ->  CHECKED {sum(e['status']=='CHECKED' for e in sym)}, FAILED {sum(e['status']=='FAILED' for e in sym)}")
     print(f"DIMENSIONAL checks run: {len(dim)}  ->  CHECKED {sum(e['status']=='CHECKED' for e in dim)}, FAILED {sum(e['status']=='FAILED' for e in dim)}")
+    print(f"SCHEMA checks run: {len(sch)}  ->  CHECKED {sum(e['status']=='CHECKED' for e in sch)}, FAILED {sum(e['status']=='FAILED' for e in sch)}")
     if write:
         print(f"\nledger written -> {ledger_path}")
     print("\n--- per-formula ledger ---")

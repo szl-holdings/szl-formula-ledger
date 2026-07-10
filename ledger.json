@@ -1,215 +1,215 @@
 {
-  "generated_at": "2026-07-09T19:05:07.060679+00:00",
+  "generated_at": "2026-07-10T01:40:51.342546+00:00",
   "ledger": [
     {
       "id": "A2-homogeneity",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy symbolic identity: Prod(c*x_i)^w_i / (c*Prod x_i^w_i) simplifies to 1 (n=3, sum w_i=1)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "A4-bounded-amgm",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy: (a+b)/2 - sqrt(ab) == (sqrt a - sqrt b)^2/2 >= 0  (GM<=AM, so GM<=max)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "F18-reed-solomon-singleton",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy exact arithmetic: Singleton n-k+1=5, erasure budget n-k=4 for RS(10,6)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "F1-euler-khipu-chi",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy: V-E+F==2 verified on all 5 Platonic solids (Euler characteristic)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "TH_V18_04-egyptian-horus",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy exact rationals: 1/2+1/4+...+1/64 == 63/64 (Horus-Eye)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "TH_V18_03-kraft",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy exact rationals: sum 2^-l == 1 <= 1 for prefix lengths {1,2,3,3}",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "F19-bekenstein-additive",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy: partition entropy additive s_total=s1+s2 and monotone s1<=s1+s2 (s2>=0)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "F12-kuramoto-additive",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy: linear superposition p_total == sum_i p_i over k=4 phases (additive fragment only)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "quadratic-completion",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy expand: x^2+bx+c == (x+b/2)^2 + (c-b^2/4)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "cauchy-schwarz-2d",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy Lagrange identity: (Sa^2)(Sb^2)-(Sab)^2 == (a1b2-a2b1)^2 >= 0",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "madhava-leibniz-atan",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy: Taylor of atan(x) matches Madhava-Leibniz series to order 12",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "fisher-rao-identity",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy: d_FR(p,p)=2*arccos(sum p_i)=2*arccos(1)=0 (exact self-distance)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "byzantine-n3f1",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy: n=3f+1=4, quorum=2f+1=3, 2*quorum>n+f (arithmetic only; safety=Conjecture-2)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "shor-913-distance",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "sympy/int: [[9,1,3]] corrects t=floor((d-1)/2)=1; classical Singleton n-k+1=9>=d",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "pinsker-2pt",
       "class": "SYMBOLIC",
       "status": "CHECKED",
       "method": "numeric sampling (NOT a symbolic proof): KL>=2*TV^2 held on 20000/20000 random 2-pt distributions",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "bekenstein-dimensional",
       "class": "DIMENSIONAL",
       "status": "CHECKED",
       "method": "sympy.physics.units: R*E/(hbar*c) has Dimension energy*length/(action*velocity) == dimensionless (Bekenstein S is a pure number)",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "landauer-energy",
       "class": "DIMENSIONAL",
       "status": "CHECKED",
       "method": "sympy.physics.units: k_B*T has Dimension(energy) == Joule dimension \u2014 Landauer bit-erasure cost",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "lambda-score-dimensionless",
       "class": "DIMENSIONAL",
       "status": "CHECKED",
       "method": "sympy.physics.units: trust axes are ratios in [0,1] (dimensionless); weighted geo-mean of dimensionless axes stays dimensionless",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "K06-rho-closure",
       "class": "EMPIRICAL",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE here: requires the named dataset (readiness-runs / uds-governance-receipts / k-verify jsonl); not a symbolic identity.",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "K13-bekenstein-fire",
       "class": "EMPIRICAL",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE here: requires the named dataset (readiness-runs / uds-governance-receipts / k-verify jsonl); not a symbolic identity.",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "K01-receipt-build-latency",
       "class": "EMPIRICAL",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE here: requires the named dataset (readiness-runs / uds-governance-receipts / k-verify jsonl); not a symbolic identity.",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "k-verify-accuracy",
       "class": "EMPIRICAL",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE here: requires the named dataset (readiness-runs / uds-governance-receipts / k-verify jsonl); not a symbolic identity.",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "F0001-system-tuple",
       "class": "DEFINITIONAL",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE by design: true by construction (a definition/schema), nothing to prove.",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "F0003-receipt-edge",
       "class": "DEFINITIONAL",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE by design: true by construction (a definition/schema), nothing to prove.",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "dsse-envelope-struct",
       "class": "DEFINITIONAL",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE by design: true by construction (a definition/schema), nothing to prove.",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "axis-schema-13",
       "class": "DEFINITIONAL",
-      "status": "UNCHECKABLE",
-      "method": "UNCHECKABLE by design: true by construction (a definition/schema), nothing to prove.",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "status": "CHECKED",
+      "method": "sympy exact arithmetic: axis partition 2 sacred + 7 structural + 4 introspection == 13; floors 0.95/0.90/0.90 in (0,1] with sacred>=structural. Schema-internal consistency only; does NOT prove the axes measure trust.",
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "TH_L1-lambda-uniqueness",
       "class": "CONJECTURE",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE by doctrine: open/metaphorical as stated; Lambda uniqueness stays Conjecture-1 (never CHECKED).",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "conjecture-2-khipu-safety",
       "class": "CONJECTURE",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE by doctrine: open/metaphorical as stated; Lambda uniqueness stays Conjecture-1 (never CHECKED).",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "conjecture-3-khipu-liveness",
       "class": "CONJECTURE",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE by doctrine: open/metaphorical as stated; Lambda uniqueness stays Conjecture-1 (never CHECKED).",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     },
     {
       "id": "code-of-reality-lineage",
       "class": "CONJECTURE",
       "status": "UNCHECKABLE",
       "method": "UNCHECKABLE by doctrine: open/metaphorical as stated; Lambda uniqueness stays Conjecture-1 (never CHECKED).",
-      "timestamp": "2026-07-09T19:05:07.060679+00:00"
+      "timestamp": "2026-07-10T01:40:51.342546+00:00"
     }
   ]
 }
