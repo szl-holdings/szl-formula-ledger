@@ -27,3 +27,6 @@ jobs:
 
       - name: Run harness in --check mode (fails on FAILED or on ledger disagreement)
         run: python harness/harness.py --check
+
+      - name: Check retained Kernel Hub contracts
+        run: python -m unittest discover -s tests -p "test_*.py"

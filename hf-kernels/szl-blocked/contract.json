@@ -1,0 +1,17 @@
+{
+  "repo_id": "SZLHOLDINGS/szl-blocked",
+  "repo_type": "kernel",
+  "observed_revision": "a6642f7346be5839049eb9a5e29361da18a12562",
+  "required_trust_remote_code": true,
+  "canonical_source": "szl-holdings/szl-formula-ledger",
+  "documented_exports": [
+    "GovernedGate",
+    "governed_call",
+    "deny_by_default",
+    "allow_if_capability",
+    "deny_if_flag",
+    "deny_if_action_in",
+    "UnifiedReceiptChain"
+  ],
+  "unsupported_exports": ["selfcheck"]
+}
