@@ -110,6 +110,13 @@ build** if any formula regresses to `FAILED` or if the freshly computed ledger
 disagrees with the committed `ledger.json`. This makes the committed ledger a
 receipt that must stay true.
 
+## Retained Kernel Hub compatibility contract
+
+The immutable loading contract for `SZLHOLDINGS/szl-blocked` is maintained in
+[`hf-kernels/szl-blocked/README.md`](hf-kernels/szl-blocked/README.md). Its
+machine-checked API table intentionally omits exports that the retained artifact
+does not implement.
+
 ---
 
 *Corpus & harness built Wave-8 R5; published Wave-9 C4. Honesty over hype.*
